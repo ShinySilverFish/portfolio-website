@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="socials">
+      <h2>Connect with me</h2>
+      <div>
+        <a href="mailto:rpietersen007@gmail.com">
+          <img src="../../assets/icons/Email.png" alt="Email">
+          rpietersen007@gmail.com
+        </a>
+      </div>
+      <div>
+        <a href="tel:+27820664201">
+          <img src="../../assets/icons/Phone.png" alt="Phone">
+          +27820664201
+        </a>
+      </div>
+      <div>
+        <a href="tel:+27640606796">
+          <img src="../../assets/icons/Whatsapp.png" alt="Whatsapp">
+          +27640606796
+        </a>
+      </div>
+      <div>
+        <a href="https://www.linkedin.com/in/rynhard-pietersen-3641ba1b9/">
+          <img src="../../assets/icons/Linkedin.png" alt="LinkedIn">
+          https://www.linkedin.com/in/rynhard-pietersen-3641ba1b9/
+        </a>
+      </div>
+    </div>
+  
+    <div class="form-container">
+      <h2>Get in touch</h2>
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <label>
+          Name:
+          <input type="text" formControlName="name">
+        </label>
+        <label>
+          Email:
+          <input type="email" formControlName="email">
+        </label>
+        <label>
+          Message:
+          <textarea formControlName="message"></textarea>
+        </label>
+        <button type="submit" [disabled]="!contactForm.valid">Submit</button>
+      </form>
+    </div>
+  </div>

@@ -1,0 +1,233 @@
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  height: 82vh;
+}
+
+.left-column {
+  flex: 0.2;
+  padding: 0 1rem;
+  height: calc(100% - 1rem);
+  background-image: url('../../assets/images/about-left-bar.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  flex: 0.8;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+}
+
+.tab, .tab.active, .tab:hover {
+  background-color: transparent;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  margin: 0 1rem;
+  outline: none;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.tab.active, .tab:hover {
+  color: white;
+  background-color: #016b44;
+  border-radius: 2px;
+  padding: 0.5rem;
+}
+
+.tab-content {
+  display: flex;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 80%;
+  height: calc(100% - 2rem);
+  overflow: auto;
+}
+
+.intro-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #016b44;
+}
+
+.intro-paragraph {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.cv-download-button {
+  display: inline-block;
+  background-color: #016b44;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  border-radius: 2px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.cv-download-button:hover {
+  background-color: #00985c;
+}
+
+.section-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.timeline-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #016b44;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.timeline-card h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #016b44;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.timeline-item {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 6px;
+  background-color: #016b44;
+}
+
+.timeline-item .timeline-date {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+}
+
+.timeline-item .timeline-content {
+  padding-left: 1rem;
+}
+
+.timeline-item .timeline-content h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #016b44;
+  margin-bottom: 1rem;
+}
+
+.skill-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  height: 12rem;
+  overflow: auto;
+}
+
+.skill-name {
+  font-family: 'Montserrat', sans-serif;
+  color: #016b44;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.skill-category {
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.skill-description {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 1.5rem;
+  background-color: #016b44;
+  border-radius: 8px;
+  transition: width 0.3s ease;
+  color: white;
+  padding-left: .5rem; 
+}
+
+.progress-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #016b44;
+  border-radius: 2px;
+}
+
+.category-heading {
+  font-family: 'Montserrat', sans-serif;
+  color: #016b44;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}

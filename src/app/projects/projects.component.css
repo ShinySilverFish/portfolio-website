@@ -1,0 +1,82 @@
+.project-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    width: 90%;
+    margin: 0 auto 2em;
+    margin-top: 2em;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+
+  .project-content:nth-child(3n) {
+    background-color: #016b44;
+    color: #fff;
+  }
+
+  .project-content:nth-child(3n+1) {
+    background-color: #fff;
+    color: black;
+  }
+
+  .project-content:nth-child(3n+2) {
+    background-color: black;
+    color: #fff;
+  }
+  
+  .project-description {
+    flex-basis: 50%;
+  }
+  
+  .project-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-basis: 50%;
+  }
+  
+  .project-images img {
+    width: 48%;
+    margin-bottom: 2%;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .project-description h2 {
+    font-size: 2em;
+  }
+
+  .project-description p {
+    font-size: 1.2em;
+  }
+
+  .tag {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 0.3em 0.6em;
+    border-radius: 3px;
+    font-size: 0.9em;
+    margin-right: 0.3em;
+  }
+
+  .github-link {
+    display: inline-block;
+    background-color: #016b44; 
+    color: #fff;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 2em;
+  }
+  
+  .github-link:hover {
+    background-color: #023d2b;
+  }
+  
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  p {
+    font-family: 'Montserrat', sans-serif;
+  }

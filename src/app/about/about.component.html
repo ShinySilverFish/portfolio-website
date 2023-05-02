@@ -1,0 +1,83 @@
+<div class="tabs">
+  <button class="tab" (click)="changeTab('introduction')" [ngClass]="{'active': activeTab === 'introduction'}">Introduction</button>
+  <button class="tab" (click)="changeTab('background')" [ngClass]="{'active': activeTab === 'background'}">Background</button>
+  <button class="tab" (click)="changeTab('skills')" [ngClass]="{'active': activeTab === 'skills'}">Skills</button>
+</div>
+
+<div class="content">
+  <div *ngIf="shouldDisplay('introduction')" class="tab-content" [@fadeInOut]="tabs['introduction']" (@fadeInOut.done)="onAnimationDone($event, 'introduction')">
+    <div class="left-column">
+    </div>
+    
+    <div class="right-column">
+      <h2 class="intro-heading">Hello there! I'm Rynhard Pietersen.</h2>
+      <p class="intro-paragraph">
+        I am an Intermediate Software Engineer based in the Western Cape, South Africa. 
+        With my skills in C#, Python, Java, Angular and more, I strive to build high quality and impactful solutions. 
+        If you want to learn more about me, please feel free to download my CV below or check out the background and skills tabs above.
+      </p>
+      <a class="cv-download-button" href="/assets/files/rynhard-pietersen-cv.pdf" download="Rynhard-Pietersen-CV.pdf">
+        Download My CV
+      </a>
+    </div>
+  </div>
+  
+  <div *ngIf="shouldDisplay('background')" class="tab-content" [@fadeInOut]="tabs['background']" (@fadeInOut.done)="onAnimationDone($event, 'background')">
+    <div class="timeline-card">
+      <app-lines-animation [numberOfLines]="15"></app-lines-animation>
+      <h2 class="section-heading">Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">2011 - 2016</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Matric Certificate</h3>
+            <p>Lydenburg Highschool</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2018 - 2019</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Microsoft Certified Software Developer</h3>
+            <p>CTU Training Solutions Nelspruit</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-card">
+      <app-lines-animation [numberOfLines]="15"></app-lines-animation>
+      <h2 class="section-heading">Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">2019 - 2021</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Junior Software Engineer</h3>
+            <p>BBSoftware Development</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2021 - 2023</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Intermediate Software Engineer</h3>
+            <p>Dimagi South Africa</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="shouldDisplay('skills')" class="tab-content" [@fadeInOut]="tabs['skills']" (@fadeInOut.done)="onAnimationDone($event, 'skills')">
+    <div *ngFor="let category of skillCategories">
+      <h3 class="category-heading">{{ category }}</h3>
+      <div *ngFor="let skill of skills">
+        <div *ngIf="skill.category === category" class="skill-bar">
+          <h4 class="skill-name">{{ skill.language }}</h4>
+          <p class="skill-description">{{skill.description}}</p>
+          <div class="progress-bar" [style.width]="(skill.experience / 5) * 100 + '%'">
+            {{ skill.experience }} years
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

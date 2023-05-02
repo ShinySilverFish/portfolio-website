@@ -1,0 +1,8 @@
+<div id="line-container">
+    <div *ngFor="let line of lines"
+        [style.top]="line.top"
+        [style.animation-duration]="line.animationDuration"
+        class="line"
+        [id]="'line-' + line.id">
+    </div>
+</div>

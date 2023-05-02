@@ -1,0 +1,43 @@
+.menu-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 98vh;
+}
+
+.menu-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: lightgray;
+    width: 33%;
+    height: 100%;
+    transition: width 0.3s ease;
+    text-decoration: none;
+    color: white;
+}
+
+.menu-link:nth-child(1){
+    background-image: url('../../assets/images/about-background.avif');
+    background-size: cover;
+    background-position: center;
+}
+
+.menu-link:nth-child(2){
+    background-image: url('../../assets/images/projects-background.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.menu-link:nth-child(3){
+    background-image: url('../../assets/images/contact-background.webp');
+    background-size: cover;
+}
+
+.menu-link:hover {
+    width: 40%;
+    background-color: gray;
+}
