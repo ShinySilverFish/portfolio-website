@@ -14,6 +14,6 @@ export class AppComponent {
   getRouter(): Router{
     return this.router;
   }
-
+  
   title = 'portfolio-website'; 
 }

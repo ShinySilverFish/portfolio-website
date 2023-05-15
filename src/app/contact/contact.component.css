@@ -81,6 +81,7 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
     margin-top: 1rem;
+    box-sizing: border-box;
   }
   
   form input[type="text"]:focus,
@@ -107,3 +108,47 @@
     background-color: #025d3e;
   }
   
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      margin-top: 2rem;
+      align-items: center;
+      padding: 0 1em;
+    }
+  
+    .socials,
+    .form-container {
+      flex-basis: 100%;
+      padding: 2%;
+      margin-right: 0;
+      margin-bottom: 2rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    .form-container {
+      box-shadow: none;
+      padding: 2%;
+      margin: 1em 0;
+    }
+  
+    .socials a {
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    .socials img {
+      width: 2rem;
+    }
+  
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+      font-size: 1.2rem;
+    }
+  
+    form button[type="submit"] {
+      font-size: 1.2rem;
+      padding: 1% 2%;
+    }
+  }

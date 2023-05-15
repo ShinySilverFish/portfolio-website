@@ -6,6 +6,7 @@ nav {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   padding: 1rem;
   font-family: 'Montserrat', sans-serif;
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
 }
 
 .left-side {
@@ -14,11 +15,12 @@ nav {
   color: #016b44;
 }
 
-nav ul {
+nav ul.nav-links {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
+  transition: transform 0.3s ease-in-out;
 }
 
 nav li {
@@ -46,4 +48,20 @@ nav a.active {
   background-color: #016b44;
   border-radius: 2px;
   padding: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    width: 100%; /* take full width */
+    justify-content: space-around;
+  }
+
+  nav li {
+    margin: 0.5rem 0; /* adjust margin for vertical layout */
+  }
+
+  .left-side {
+    width: 100%;
+    text-align: center;
+  }
 }

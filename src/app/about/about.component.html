@@ -67,14 +67,16 @@
   </div>
   
   <div *ngIf="shouldDisplay('skills')" class="tab-content" [@fadeInOut]="tabs['skills']" (@fadeInOut.done)="onAnimationDone($event, 'skills')">
-    <div *ngFor="let category of skillCategories">
-      <h3 class="category-heading">{{ category }}</h3>
-      <div *ngFor="let skill of skills">
-        <div *ngIf="skill.category === category" class="skill-bar">
-          <h4 class="skill-name">{{ skill.language }}</h4>
-          <p class="skill-description">{{skill.description}}</p>
-          <div class="progress-bar" [style.width]="(skill.experience / 5) * 100 + '%'">
-            {{ skill.experience }} years
+    <div class="skill-wrapper">
+      <div *ngFor="let category of skillCategories" class="skill-container">
+        <h3 class="category-heading">{{ category }}</h3>
+        <div *ngFor="let skill of skills">
+          <div *ngIf="skill.category === category" class="skill-bar">
+            <h4 class="skill-name">{{ skill.language }}</h4>
+            <p class="skill-description">{{skill.description}}</p>
+            <div class="progress-bar" [style.width]="(skill.experience / 5) * 100 + '%'">
+              {{ skill.experience }} years
+            </div>
           </div>
         </div>
       </div>
